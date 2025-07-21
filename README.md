@@ -15,7 +15,7 @@ A simple number guessing game built with HTML, CSS, and JavaScript.
 
 ## 📸 Guess My Number Game
 
-![Guess My Number Game](./guessMyNumber.jpg)
+![Guess My Number Game](./images/guessMyNumber.jpg)
 
 ---
 
