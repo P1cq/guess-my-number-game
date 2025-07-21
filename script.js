@@ -17,9 +17,9 @@ let boxGuess = document.querySelector('.box-guess');
 //  storage queestion mark
 let question = document.querySelector('.question');
 //  storage audio
-const winSound = new Audio('/sounds/win.mp3');
-const loseSound = new Audio('/sounds/lose.mp3');
-const clickSound = new Audio('/sounds/click.mp3');
+const winSound = new Audio('win.mp3');
+const loseSound = new Audio('lose.mp3');
+const clickSound = new Audio('click.mp3');
 
 // function to message win or lose
 const message = msg => (document.querySelector('.p-1').textContent = msg);
