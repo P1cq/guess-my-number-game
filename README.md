@@ -11,11 +11,11 @@ A simple number guessing game built with HTML, CSS, and JavaScript.
 
 ## 📺 Live Demo
 
-[Play Now](https://github.com/P1cq/guess-my-number-game)
+[Play Now](https://p1cq.github.io/guess-my-number-game/)
 
-## 📸 Screenshot
+## 📸 Guess My Number Game
 
-![Guess My Number Game](/guessMyNumber.jpg)
+![Guess My Number Game](/guess-my-number-game/guessMyNumber.jpg)
 
 ---
 
