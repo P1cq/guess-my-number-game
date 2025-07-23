@@ -122,7 +122,7 @@ const btnAgain = function () {
   // for reset line style
   hr.style.border = '2px solid white';
   // for reset box number style
-  boxNumber.style.width = '70px';
+  boxNumber.style.width = '90px';
   boxNumber.style.backgroundColor = 'black';
   // for reset question style
   question.textContent = '?';
