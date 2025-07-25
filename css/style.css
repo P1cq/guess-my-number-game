@@ -16,23 +16,10 @@ header {
   padding: 16px;
 }
 
-/* زر Again! قريب من الزاوية */
-.btn-again {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  font-size: 25px;
-  width: 140px;
-  height: 50px;
-  padding: 8px 16px;
-  background-color: #eee;
-  border-radius: 10px;
-}
-
 /* Between 1 and 20 */
 .p-header {
   position: absolute;
-  top: 8px;
+  top: 20px;
   right: 8px;
   font-size: 16px;
   color: aliceblue;
@@ -42,8 +29,8 @@ header {
 .main-world {
   font-size: 80px;
   text-align: center;
-  word-spacing: 30px;
-  margin: 128px 0 64px 0;
+  word-spacing: 4px;
+  margin: 8px 0 64px 0; /* قلل المسافة من فوق */
 }
 
 /* المربع اللي فيه علامة الاستفهام */
@@ -71,134 +58,129 @@ header {
   z-index: 1;
 }
 
-.left,
-.right {
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* يخلي العناصر تبدأ من اليسار */
+  gap: 100px; /* مسافة بين الزر والصندوق */
+  margin-top: -120px;
+}
+/* left section */
+.left {
   width: 50%;
-  float: left;
-  margin-top: 80px;
   padding: 0 32px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start; /* محاذاة لليسار */
+  align-items: flex-start;
+}
+
+/* game section */
+.game-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 20px;
   text-align: center;
 }
 
-/* left section */
-.left {
-  text-align: center;
-  margin-top: -163px;
+.p-1 {
+  font-size: 48px;
+  margin-top: 8px;
+  word-spacing: 10px;
+  font-weight: 600;
+}
+
+.p-2 {
+  font-size: 24px;
+}
+.p-3 {
+  font-size: 24px;
 }
 
 .box-guess {
   background-color: black;
   border: 2px solid white;
-  width: 200px;
+  width: 300px;
   height: 70px;
-  color: aliceblue;
-  font-size: 40px;
+  color: white;
+  font-size: 30px;
   text-align: center;
-  margin-bottom: 8px;
   border-radius: 10px;
+  padding: 18px 0;
+  line-height: 70px;
+  box-sizing: border-box;
+}
+.box-guess::placeholder {
+  color: #aaa;
+  font-size: 24px;
+  text-align: center;
 }
 
 .check {
-  width: 200px;
+  width: 300px;
   height: 60px;
   font-size: 25px;
   background-color: #eee;
   cursor: pointer;
   border-radius: 10px;
-  display: block;
-  margin-top: -4px;
-  margin-left: 209px;
+  color: rgb(7, 12, 0);
 }
-
-/* right section */
-.right {
-  text-align: right;
-  font-size: 40px;
-  font-style: oblique;
-  margin-left: 40%;
-  margin-top: 6%;
+/* زر Again! قريب من الزاوية */
+.btn-again {
+  font-size: 25px;
+  width: 300px;
+  height: 60px;
+  padding: 8px 16px;
+  background-color: #000000;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: -16px;
+  border: none;
+  color: rgb(181, 181, 181);
 }
-
-.p-1 {
-  margin-bottom: 40px;
-  margin-right: 35px;
-  word-spacing: 15px;
-}
-
-.p-2 {
-  margin-right: 35px;
-}
-
 /* === RESPONSIVE === */
+
 @media (max-width: 768px) {
   .main-world {
-    font-size: 47px;
-    word-spacing: 10px;
-    margin: 32px 0 32px 0;
+    font-size: 48px;
+    margin-top: 32px;
+    margin-bottom: 54px;
+    word-spacing: 3px;
+    font-weight: 600;
   }
-
-  .hr {
-    margin-top: -45px;
+  .btn-again {
+    width: 80%;
+    font-size: 20px;
+    margin: -8px auto;
+    display: block;
   }
-
-  .box-number {
-    width: 60px;
-    height: 70px;
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-    float: none;
-    text-align: center;
-    padding: 16px;
-    margin-top: 20px;
+  .game-section {
+    gap: 16px;
+    margin-top: 50px;
   }
 
   .box-guess {
     width: 80%;
     font-size: 28px;
-    margin: 0 auto 4px auto;
+    margin-bottom: 8px;
   }
 
   .check {
     width: 80%;
     font-size: 20px;
-    margin: 0 auto;
-    display: block;
   }
 
-  .btn-again {
-    position: relative;
-    margin: 8px auto;
-    display: block;
-    margin-left: 145px;
-    margin-top: -10px;
+  .p-1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 8px;
   }
 
-  .p-header {
-    position: relative;
-    margin: 8px auto;
-    margin-top: 8px;
-    font-size: 14px;
-    text-align: center;
-    color: aliceblue;
-  }
-
-  .right {
-    font-size: 24px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: -20px;
-  }
-
-  .p-1,
   .p-2 {
-    margin: 10px auto;
-    word-spacing: 10px;
+    font-size: 18px;
   }
 }
