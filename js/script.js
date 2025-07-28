@@ -139,3 +139,9 @@ document.querySelector('.check').addEventListener('click', btnCheckEvent);
 
 // btn again
 document.querySelector('.btn-again').addEventListener('click', btnAgain);
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    btnCheckEvent();
+  }
+});
