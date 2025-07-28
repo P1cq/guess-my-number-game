@@ -42,6 +42,7 @@ const comparisonFunction = textMessage => {
   // to make the score show it after --
   document.querySelector('.score-num').textContent = scoreNumber;
 };
+
 // function for (btn event)
 const btnCheckEvent = function () {
   // sound effect for click on btn check
@@ -84,6 +85,7 @@ const btnCheckEvent = function () {
       highScore = scoreNumber;
       document.querySelector('.high-score').textContent = highScore;
     }
+
     gameOver = true;
   }
 
@@ -91,7 +93,7 @@ const btnCheckEvent = function () {
   else if (randomNumber > userValue) {
     comparisonFunction('Too Low');
     // codition for losing the game
-    if (scoreNumber == 0) {
+    if (scoreNumber === 0) {
       losingSituation();
     }
   }
@@ -99,15 +101,19 @@ const btnCheckEvent = function () {
   else if (randomNumber < userValue) {
     comparisonFunction('Too High');
     // codition for losing the game
-    if (scoreNumber === 0) losingSituation();
+    if (scoreNumber === 0) {
+      losingSituation();
+    }
   }
 };
 //  btn Again function event
 const btnAgain = function () {
   // sound effect for click on btn Again
   clickSound.play();
+
   // make reset for every elments style we used  in APIs
   gameOver = false;
+
   // for make new random number
   randomNumber = Math.trunc(Math.random() * 20) + 1;
   // for reset all API to first Situation
@@ -140,8 +146,13 @@ document.querySelector('.check').addEventListener('click', btnCheckEvent);
 // btn again
 document.querySelector('.btn-again').addEventListener('click', btnAgain);
 
+// for key when lose or win or play
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {
-    btnCheckEvent();
+    if (gameOver) {
+      btnAgain();
+    } else {
+      btnCheckEvent();
+    }
   }
 });
